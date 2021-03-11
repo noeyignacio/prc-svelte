@@ -16,18 +16,16 @@
 
 <main>
 	{#each fruits as fruit (fruit.id)}
-		{#if fruit.quantity > 4}
-			<div class="ui cards">
-				<div class="card">
-					<div class="content">
-						<div class="header">{fruit.name}</div>
-						<div class="meta">Quantity: {fruit.quantity}</div>
-						<div class="description">Color: {fruit.color}</div>
-					</div>
-					<button class="ui red button" on:click={() => deleteFruit(fruit.id)}>Delete</button>
+		<div class="ui cards">
+			<div class="card">
+				<div class="content">
+					<div class="header">{fruit.name}</div>
+					<div class="meta">Quantity: {fruit.quantity}</div>
+					<div class="description">Color: {fruit.color}</div>
 				</div>
+				<button class="ui red button" on:click={() => deleteFruit(fruit.id)}>Delete</button>
 			</div>
-		{/if}
+		</div>
 	{:else}
 		<p>There is no Fruits.</p>
 	{/each}
