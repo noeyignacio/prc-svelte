@@ -2,4 +2,4 @@
     export let buttonText;
 </script>
 
-<button class="ui orange button">{buttonText}</button>
+<button on:click class="ui orange button">{buttonText}</button>
